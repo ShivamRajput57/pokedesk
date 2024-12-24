@@ -68,6 +68,7 @@ button {
     left: 33rem;
     cursor: pointer;
     z-index: 2;
+    padding:1.5rem;
 }
 
 /* Hover effects for past card */
@@ -83,7 +84,7 @@ button {
 .past:hover ~ .future {
     transform: translateZ(-50px) translateX(2rem);
 }
-    
+
 /* Hover effects for present card */
 .present:hover {
     transform: translateY(-2rem) scale(1.05);

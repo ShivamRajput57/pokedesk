@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>pokemon_flash_card</title>
 </head>
@@ -19,15 +20,18 @@
         </div>
         <div class="present">
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="">
-            <h1>pikachu</h1>
-            <h2>ex-777</h2>
+            <h1 id="name">pikachu</h1>
+            <h2 id="base_exp">bse_exp-777</h2>
+            <h2 id="HP">hp-777</h2>
+            <h2 id="Attack">attack-777</h2>
+            <h2 id="Defence">defence-777</h2>
             <ul>
-                <li>weight</li>
-                <li>height</li>
-                <li>ability</li>
+                <li id="weight">weight</li>
+                <li id="height">height</li>
             </ul>
         </div>
         <div class="future">future</div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
