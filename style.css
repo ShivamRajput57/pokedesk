@@ -1,25 +1,110 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-.search{
+.search {
     display: flex;
     background-color: blue;
-    border: 5px  red solid;
+    border: 5px red solid;
     flex-direction: column;
-    align-items:center;
-    
+    align-items: center;
 }
 
-
-label{
+label {
     font-size: large;
     margin: 0.5rem 0;
 }
-button{
+
+button {
     margin: 0.5rem 0;
-    width:100px;
+    width: 100px;
+}
+
+.back {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+
+.cards {
+    background-color: aqua;
+    position: relative;
+    min-height: 35rem;
+    perspective: 1000px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+
+.past, .future, .present {
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.past {
+    width: 25rem;
+    height: 30rem;
+    background-color: green;
+    position: relative;
+    z-index: 1;
+}
+
+.future {
+    width: 25rem;
+    height: 30rem;
+    background-color: brown;
+    position: relative;
+    z-index: 1;
+}
+
+.present {
+    width: 30rem;
+    height: 30rem;
+    background-color: yellow;
+    position: absolute;
+    top: 3rem;
+    left: 33rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Hover effects for past card */
+.past:hover {
+    transform: translateY(-2rem)  scale(1.05);
+    z-index: 3;
+}
+
+.past:hover ~ .present {
+    transform: translateZ(-50px) translateX(2rem);
+}
+
+.past:hover ~ .future {
+    transform: translateZ(-50px) translateX(2rem);
+}
+    
+/* Hover effects for present card */
+.present:hover {
+    transform: translateY(-2rem) scale(1.05);
+    z-index: 2;
+}
+
+.present:hover ~ .future {
+    transform: translateZ(-100px) translateX(2rem);
+}
+
+/* Hover effects for future card */
+.future:hover {
+    transform: translateY(-2rem) scale(1.05);
+    z-index: 2;
+}
+
+.future:hover ~ .present {
+    transform: translateZ(-50px) translateX(-2rem);
+}
+
+/* Adding box shadow on hover for better depth effect */
+.past:hover, .present:hover, .future:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
