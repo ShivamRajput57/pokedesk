@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #640D5F;
+}
 
 .search {
     display: flex;
-    background-color: blue;
-    border: 5px red solid;
+    background-color: #7AB2D3;
     flex-direction: column;
     align-items: center;
 }
@@ -21,6 +23,9 @@ button {
     margin: 0.5rem 0;
     width: 100px;
 }
+.warning{
+    color: red;
+}
 
 .back {
     display: flex;
@@ -29,7 +34,6 @@ button {
 }
 
 .cards {
-    background-color: aqua;
     position: relative;
     min-height: 35rem;
     perspective: 1000px;
@@ -46,30 +50,48 @@ button {
 .past {
     width: 25rem;
     height: 30rem;
-    background-color: green;
+    background-color:#D91656;
     position: relative;
     z-index: 1;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 10px;
 }
 
 .future {
     width: 25rem;
     height: 30rem;
-    background-color: brown;
+    background-color: #EB5B00;
     position: relative;
     z-index: 1;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 10px;
 }
 
 .present {
     width: 30rem;
     height: 30rem;
-    background-color: yellow;
+    background-color: #FFB200;
     position: absolute;
     top: 3rem;
     left: 33rem;
     cursor: pointer;
     z-index: 2;
     padding:1.5rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 10px;
 }
+
+#name{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+img{
+    margin-left: 30%;
+    text-align: center;
+    width: 40%;
+}
+
 
 /* Hover effects for past card */
 .past:hover {

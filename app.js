@@ -3,8 +3,10 @@ url="https://pokeapi.co/api/v2/pokemon/"
 btn.addEventListener('click',async ()=>{
     input=document.querySelector('input')
     querry=url+input.value
-    data=await getdata(querry)
+    data=await getdata(querry.toLowerCase())
     if (data==1){
+        let warning=document.querySelector('.warning')
+        warning.innerText="Please enter the correct name or there is an api error"
         console.log('not foud')
     }else{
 
@@ -20,7 +22,7 @@ btn.addEventListener('click',async ()=>{
         let name=data.name
 
         let h1 = document.querySelector("#name")
-        h1.innerText = name
+        h1.innerText = name.toUpperCase()
 
         let base = document.querySelector("#base_exp")
         base.innerText = `BASE EXP: ${base_Exp}`
